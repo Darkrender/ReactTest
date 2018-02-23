@@ -12,15 +12,19 @@ type CounterProps =
 
 class Counter extends React.Component<CounterProps, {}> {
     public render() {
-        return <div>
-            <h1>Counter</h1>
+        const { count, increment } = this.props;
 
-            <p>This is a simple example of a React component.</p>
+        return (
+            <div>
+                <h1>Counter Logic Gaming</h1>
 
-            <p>Current count: <strong>{ this.props.count }</strong></p>
+                <p>This is a simple example of a React component.</p>
 
-            <button onClick={ () => { this.props.increment() } }>Increment</button>
-        </div>;
+                <p>Current count: <strong>{count}</strong></p>
+
+                <button onClick={() => { increment() }}>Increment</button>
+            </div>
+        );
     }
 }
 
